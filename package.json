@@ -1,0 +1,29 @@
+{
+  "name": "react-express-seed-web-app",
+  "version": "1.0.0",
+  "description": "A minimal React client + Express API server 'seed' web app, ready for development.",
+  "main": "server.js",
+  "repository": "git@github.com:graphicdeveloper/react-express-seed-web-app.git",
+  "author": "David Baldeschwieler",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.9"
+  },
+  "engines": {
+    "node": "14.17.2",
+    "npm": "6.14.13"
+  },
+  "scripts": {
+    "start": "node ./server/server.js",
+    "devapi": "nodemon ./server/server.js",
+    "devui": "cd ./client && yarn start",
+    "build": "cd ./client && yarn build",
+    "test": "cd ./client && yarn test",
+    "eject": "cd ./client && yarn eject"
+  }
+}
