@@ -21,9 +21,9 @@
   "scripts": {
     "start": "node ./server/server.js",
     "devapi": "nodemon ./server/server.js",
-    "devui": "cd ./client && yarn start",
-    "build": "cd ./client && yarn build",
-    "test": "cd ./client && yarn test",
-    "eject": "cd ./client && yarn eject"
+    "devui": "cd client && yarn start",
+    "build": "cd client && yarn install && yarn build",
+    "test": "cd client && yarn test",
+    "eject": "cd client && yarn eject"
   }
 }
