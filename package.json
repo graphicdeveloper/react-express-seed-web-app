@@ -1,6 +1,6 @@
 {
   "name": "react-express-seed-web-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal React client + Express API server 'seed' web app, ready for development.",
   "main": "server.js",
   "repository": "git@github.com:graphicdeveloper/react-express-seed-web-app.git",
