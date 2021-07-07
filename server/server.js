@@ -10,7 +10,7 @@ const cors = require('cors')
 const helmet = require('helmet')
 const logger = require("morgan");
 
-const apiRouter = require(path.join(__dirname,'route','apiRouter'));
+const apiRouter = require(path.join(__dirname,'router','apiRouter'));
 
 const app = express();
 const port = process.env.PORT || 3001
