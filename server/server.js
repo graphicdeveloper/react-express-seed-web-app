@@ -27,23 +27,22 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(helmet())
 app.use(cors())
 
+// Route API calls to a separate router and controller
 app.use('/api', apiRouter)
 
-app.get('/ping', function (req, res) {
-    res.status(200);
-    return res.send('pong!')
-})
-
+// Route everything else to the React UI at index.html
 app.get('/', function (req, res) {
     res.status(200);
     res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'));
 });
 
+// Redirect all non-API paths back to the webroot - React Router handles all paths internally (SPA)
 app.get('*', function (req, res) {
     res.status(200);
     res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'));
 });
 
+// Finally, start listening for network traffic on the assigned port - game on!
 app.listen(port, (err) => {
     if (err) {
         console.log('** ------------------- EXPRESS ERROR! ------------------- **')
